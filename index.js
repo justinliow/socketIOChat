@@ -10,6 +10,10 @@ io.on('connection', function(socket){
 	console.log('a user connected on'+socket.id);
 	//clients.push(socket.id);
 	//console.log(clients);
+	socket.on('disconnect', function(){
+		console.log('a user disconnected');
+
+	});
 });
 var result='boop';
 io.on('connection', function(socket){
